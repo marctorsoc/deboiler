@@ -25,7 +25,6 @@ setup(
         "fastavro",
         "lxml",
         "tldextract",
-        "importlib-metadata<4.3",  # For flake8 compatibility with importlib-metadata
         "langdetect",
     ],
     extras_require={
