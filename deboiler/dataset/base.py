@@ -97,5 +97,5 @@ class DeboilerDataset(ABC):
             (not self.content_type_key or record.get(self.content_type_key) == "text/html")
             and
             # Ensure bytes or string content object type
-            isinstance(record["content"], (bytes, str))
+            isinstance(record[self.content_key], (bytes, str))
         )
