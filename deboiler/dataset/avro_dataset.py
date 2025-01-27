@@ -77,7 +77,7 @@ class AvroDataset(DeboilerDataset):
                 file.seek(0)
                 avro_reader = reader(file)
                 record = next(avro_reader)
-            return RawPage(record["url"], record["content"])
+            return RawPage(record["url"], record[self.content_key])
 
     def __len__(self) -> int:
         return len(self.index)
